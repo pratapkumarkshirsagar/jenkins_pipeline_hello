@@ -10,6 +10,7 @@ node {
 }
 stage('Get approval'){
     input "Deploy to qa?"
+    input "Deploy to prod?"
 }
 node {
     stage('deploy to qa'){
