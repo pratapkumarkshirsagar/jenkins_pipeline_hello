@@ -10,16 +10,18 @@ node {
 }
 stage('Get approval'){
     input "Deploy to qa?"
-    input "Deploy to prod?"
-}
+  }
 node {
     stage('deploy to qa'){
         echo "deploying"
     }
-    
+}
+
+stage('Get approval'){
+    input "Deploy to prod?"
+  }
 node {
     stage('deploy to prod'){
-        echo " prod deploying"
-    }    
-    
+        echo "prod deploying"
+    }
 }
